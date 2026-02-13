@@ -18,7 +18,7 @@ function solveEquation(a, b, c) {
   return results;
 }
 
-console.log(solveEquation(1, 5, 64);
+console.log(solveEquation(1, 5, 64));
 console.log(solveEquation(1, 2, 1));
 console.log(solveEquation(1, 2, 10));
 
