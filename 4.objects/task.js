@@ -10,19 +10,17 @@ Student.prototype.setSubject = function (subjectName) {
 };
 
 Student.prototype.addMarks = function (...marksToAdd) {
-  if (!this.marks) {
-    return;
+  if (this.marks !== undefined) {
+    this.marks.push(...marksToAdd);
   }
-  
-  this.marks.push(...marksToAdd);
 };
 
 Student.prototype.getAverage = function () {
   if (!this.marks || this.marks.length === 0) {
     return 0;
   }
-
-  const sum = this.marks.reduce((acc, mark) => acc + mark, 0);
+  
+  const sum = this.marks.reduce((acc, curr) => acc + curr, 0);
   return sum / this.marks.length;
 };
 
